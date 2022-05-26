@@ -80,9 +80,9 @@ def music(update: Update, context: CallbackContext):
             infoo = ytdl.extract_info(url, False)
             duration = round(infoo["duration"] / 60)
 
-            if duration > 10:
+            if duration > 200:
                 pablo.edit_text(
-                    f"❌ Videos longer than 10 minute(s) aren't allowed, the provided video is {duration} minute(s)"
+                    f"❌ Videos longer than 200 minute(s) aren't allowed, the provided video is {duration} minute(s)"
                 )
                 is_downloading = False
                 return
@@ -161,9 +161,9 @@ def video(update: Update, context: CallbackContext):
             infoo = ytdl.extract_info(url, False)
             duration = round(infoo["duration"] / 60)
 
-            if duration > 10:
+            if duration > 200:
                 pablo.edit_text(
-                    f"❌ Videos longer than 10 minute(s) aren't allowed, the provided video is {duration} minute(s)"
+                    f"❌ Videos longer than 200 minute(s) aren't allowed, the provided video is {duration} minute(s)"
                 )
                 is_downloading = False
                 return
